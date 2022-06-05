@@ -24,11 +24,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', Storefront, name='home'),
     path('Shop/', Shop, name='shop'),
-    path('product/', Product_detail, name='product'),
     path('wishlist/', Wishlist, name='wishlist'),
     path('mycart/', AddCart, name='mycart'),
     path('checkout/', Checkout, name='checkout'),
 
+    # fetching products
+    path('category', categories, name='category'),
+    path('categories/<str:slug>', category_view, name='product_category'),
+    # product detail
+    path('categories/<str:cate_slug>/<str:prod_slug>', Product_detail, name='productdetail'),
 
     path('register/', register, name='register'),
 
