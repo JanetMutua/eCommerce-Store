@@ -15,14 +15,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Store.views import Storefront
+from Store.views import *
 from User.views import register
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('Shop', Storefront, name='store'),
+    path('', Storefront, name='home'),
+    path('Shop/', Shop, name='shop'),
+    path('product/', Product_detail, name='product'),
+    path('wishlist/', Wishlist, name='wishlist'),
+    path('mycart/', AddCart, name='mycart'),
+    path('checkout/', Checkout, name='checkout'),
+
 
     path('register/', register, name='register'),
+
+    
     # path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
     # path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
     # path('profile/', user_views.profile, name='profile'),
@@ -37,4 +47,4 @@ urlpatterns = [
     #     template_name='users/password_reset_done.html'), name='password_reset_done'),
 
     #path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
