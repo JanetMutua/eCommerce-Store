@@ -14,7 +14,7 @@ def get_file_path(request, filename):
 
 
 class Category(models.Model):
-    category_type = models.CharField(max_length=150, null=False, blank=False)
+    slug = models.CharField(max_length=150, null=False, blank=False)
     name = models.CharField(max_length=150, null=False, blank=False)
     image= models.ImageField(upload_to= get_file_path, height_field=None, width_field=None, max_length = None)
     description = models.TextField(max_length=500, name=False, blank=False)
