@@ -45,7 +45,13 @@
                 {%for item in products%}
                     <div class="col-lg-3 col-md-6 special-grid bulbs">
                         <div class="products-single fix">
-                            <a href="{% url 'productdetail' item.category.slug item.slug%}">
+
+
+                            {% comment %} error....check this error plus static page error {% endcomment %}
+
+                            {% comment %} add this as a url {% url 'productdetail' item.category.slug item.slug%} {% endcomment %}
+                            
+                            {% comment %} <a href="{% url 'productdetail' item.category.slug item.slug%}"> {% endcomment %}
                                 <div class="box-img-hover">
                                     {% comment %} <div class="type-lb">
                                         <p class="sale">Sale</p>

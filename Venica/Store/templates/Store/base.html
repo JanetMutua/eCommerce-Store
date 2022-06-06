@@ -28,7 +28,16 @@
     <link rel="stylesheet" href="{% static 'Store/responsive.css'%}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'Store/custom.css'%}">
+    {% comment %} register css {% endcomment %}
 
+    <link rel="stylesheet" href="{% static 'Store/register.css'%}">
+
+    {% comment %} ALertify Js {% endcomment %}
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+
+    
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -136,7 +145,6 @@
                 <div class="attr-nav">
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
-                        <li><a href="#"><i class="fa fa-user s_color"></i></a></li>
                         <li class="side-menu">
 							<a href="#">
 								<i class="fa fa-shopping-bag"></i>
@@ -146,6 +154,26 @@
 
 							</a>
 						</li>
+
+                        {% comment %} login section {% endcomment %}
+                        {%if request.user.is_authenticated%}
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{request.user}}
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{%url 'mycart'%}">MyCart</a></li>
+                                <li><a class="dropdown-item" href="{%url 'mycart'%}">Orders</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{%url 'logout'%}">Logout</a></li>
+                                </ul>
+                            </li>
+                            {% comment %} <li><a href="{%url 'logout'%}">LOGOUT</i></a></li> {% endcomment %}
+
+                        {%else%}
+                            <li><a href="{%url 'loginpage'%}"><i class="fa fa-user s_color"></i></a></li>
+                        {%endif%}
+                        {% comment %} shoping cart {% endcomment %}
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -442,6 +470,10 @@
     <script src="{{'/js/form-validator.min.js'}}"></script>
     <script src="{{'/js/contact-form-script.js'}}"></script>
     <script src="{{'/js/custom.js'}}"></script>
+
+    {% comment %} alertify js {% endcomment %}
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     
     
 </body>

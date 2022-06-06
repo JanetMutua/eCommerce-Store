@@ -9,8 +9,11 @@ def Storefront(request):
     return render(request, 'Store/index.html')
 
 
+
 def Shop(request):
-    return render(request, 'Store/shop.html')
+    products = Product.objects.filter(status=0)
+    context = {'products': products}
+    return render(request, 'Store/shop.html', context)
 
 
 def Product_detail(request, cate_slug, prod_slug):
@@ -18,7 +21,6 @@ def Product_detail(request, cate_slug, prod_slug):
         if(Product.objects.filter(slug=prod_slug, status=0)):
             products = Product.objects.filter(slug=prod_slug, status=0).first
             context = {'products': products}
-            return render(request, 'Store/productdetail.html', context)
         else:
             messages.error(request, 'Something went wrong')
             return redirect('categories')
@@ -26,6 +28,7 @@ def Product_detail(request, cate_slug, prod_slug):
     else:
         messages.error(request, 'Something went wrong')
         return redirect('categories')
+    return render(request, 'Store/productdetail.html', context)
 
 def Wishlist(request):
     return render(request, 'Store/wishlist.html')
