@@ -60,3 +60,15 @@ def category_view(request, slug):
     else:
         messages.warning(request, 'No such Category')
         return redirect('categories')
+
+
+# def newarrivals(request, slug):
+#     if(Category.objects.filter(slug = slug, new_arrival=1)):
+#         products= Product.objects.filter(category__slug = slug)
+#         category_name = Category.objects.filter(slug = slug).first()
+#         context = {'products':products, 'category_name': category_name}
+#         return render(request, 'Store/product_category.html', context)
+
+#     else:
+#         messages.warning(request, 'No such Category')
+#         return redirect('categories')

@@ -752,7 +752,7 @@
      color: #fff;
      line-height: 90px;
      text-align: center;
-     transition: all .3s ease-in-out;
+     transition: all .2s ease-in-out;
 }
  .slides-navigation a i{
      font-size: 40px;
@@ -815,12 +815,14 @@
 }
  .shop-cat-box{
 
-    border-radius: 25px;
+    /* rounded corner effect */
+
+    /* border-radius: 25px;
     background-position: left top;
     background-repeat: repeat;
     padding: 20px;
     width: 350px;
-    height: 300px;
+    height: 300px; */
 
      margin-bottom: 30px;
      position: relative;
@@ -1183,7 +1185,7 @@
 /*------------------------------------------------------------------ Instagram Feed -------------------------------------------------------------------*/
  .instagram-box{
      padding: 70px 0px;
-     background: url(../images/ins-bg.jpg) no-repeat center center;
+     /* background: url(../images/ins-bg.jpg) no-repeat center center; */
      background-size: auto auto;
      -webkit-background-size: cover;
      -moz-background-size: cover;
@@ -1243,7 +1245,7 @@
      transition: all 0.3s ease;
 }
  .main-instagram.owl-carousel .owl-nav button.owl-next:hover, .main-instagram.owl-carousel .owl-nav button.owl-prev:hover{
-     background: #b0b435;
+     background: #ffd700;
 }
  .ins-inner-box{
      position: relative;
@@ -1298,7 +1300,7 @@
 	font-size: 20px;
 }
 .footer-top-box h3::before {
-    border-bottom: 2px solid #ffd700;
+    /* border-bottom: 2px solid #ffd700; */
     content: "";
     height: 3px;
     width: 50%;
@@ -1363,10 +1365,10 @@
      text-align: center;
      line-height: 32px;
 }
- .footer-top-box ul li a:hover {
+ /* .footer-top-box ul li a:hover {
      color: #ffd700;
      border-color: #ffd700;
-}
+} */
 .footer-widget, .footer-link, .footer-link-contact{
 	margin-top: 15px;
 }
@@ -1380,7 +1382,7 @@
      font-weight: 700;
 }
  .footer-widget h4::before {
-     border-bottom: 3px solid #ffd700;
+     /* border-bottom: 3px solid #ffd700; */
      content: "";
      height: 3px;
      width: 100%;
@@ -1407,7 +1409,7 @@
      font-weight: 700;
 }
  .footer-link h4::before {
-     border-bottom: 3px solid #ffd700;
+     /* border-bottom: 3px solid #ffd700; */
      content: "";
      height: 3px;
      width: 100%;
@@ -1462,7 +1464,7 @@
      font-weight: 700;
 }
  .footer-link-contact h4::before {
-     border-bottom: 3px solid #ffd700;
+     /* border-bottom: 3px solid #ffd700; */
      content: "";
      height: 3px;
      width: 100%;
@@ -1545,7 +1547,7 @@
      padding: 10px 0px;
 }
  .all-title-box .breadcrumb{
-     background: #b0b435;
+     background: #ffd700;
      margin: 0px;
      display: inline-block;
      border-radius: 0px;
@@ -1867,7 +1869,7 @@
      margin-bottom: 20px;
 }
  #slider-range .ui-slider-handle {
-     background-color: #b0b435;
+     background-color: #ffd700;
      border: 2px solid #fff;
      border-radius: 50%;
      cursor: pointer;
@@ -1878,7 +1880,7 @@
      box-shadow: 0px 0px 6.65px 0.35px rgba(0,0,0,0.15);
 }
  #slider-range .ui-slider-range {
-     background-color: #b0b435;
+     background-color: #ffd700;
      border-radius: 0;
 }
  #slider-range {
