@@ -37,7 +37,7 @@
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
 
-    
+
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -131,7 +131,6 @@
                                 <li><a href="{%url 'wishlist'%}">Wishlist</a></li>
                                 <li><a href="{%url 'mycart'%}">Cart</a></li>
                                 <li><a href="{%url 'checkout'%}">Checkout</a></li>
-                                <li><a href="my-account.html">My Account</a></li>
                             </ul>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="shop.html">Clearance Sales</a></li>
@@ -184,17 +183,17 @@
                 <li class="cart-box">
                     <ul class="cart-list">
                         <li>
-                            <a href="#" class="photo"><img src="{% static 'images/img-pro-01.jpg'%}" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="{% static 'Store/images/img-pro-01.jpg'%}" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Delica omtantur </a></h6>
                             <p>1x - <span class="price">$80.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="{% static 'images/img-pro-02.jpg" class="cart-thumb'%}" alt="" /></a>
+                            <a href="#" class="photo"><img src="{% static 'Store/images/img-pro-02.jpg" class="cart-thumb'%}" alt="" /></a>
                             <h6><a href="#">Omnes ocurreret</a></h6>
                             <p>1x - <span class="price">$60.00</span></p>
                         </li>
                         <li>
-                            <a href="#" class="photo"><img src="{% static 'images/img-pro-03.jpg'%}" class="cart-thumb" alt="" /></a>
+                            <a href="#" class="photo"><img src="{% static 'Store/images/img-pro-03.jpg'%}" class="cart-thumb" alt="" /></a>
                             <h6><a href="#">Agam facilisis</a></h6>
                             <p>1x - <span class="price">$40.00</span></p>
                         </li>
@@ -451,25 +450,24 @@
 
     <!-- ALL JS FILES -->
 
-    
 
-    <script src="{{'/js/jquery-3.2.1.min.js'}}"></script>
-    <script src="{{'/js/popper.min.js'}}"></script>
-    <script src="{{'/js/bootstrap.min.js'}}"></script>
+    <script src="{% static 'Store/js/jquery-3.2.1.min.js'%}"></script>
+    <script src="{% static 'Store/js/popper.min.js'%}"></script>
+    <script src="{% static 'Store/js/bootstrap.min.js'%}"></script>
 
     <!-- ALL PLUGINS -->
 
-    <script src="{{'/js/jquery.superslides.min.js'}}"></script>
-    <script src="{{'/js/bootstrap-select.js'}}"></script>
-    <script src="{{'/js/inewsticker.js'}}"></script>
-    <script src="{{'/js/bootsnav.js'}}"></script>
-    <script src="{{'/js/images-loded.min.js'}}"></script>
-    <script src="{{'/js/isotope.min.js'}}"></script>
-    <script src="{{'/js/owl.carousel.min.js'}}"></script>
-    <script src="{{'/js/baguetteBox.min.js'}}"></script>
-    <script src="{{'/js/form-validator.min.js'}}"></script>
-    <script src="{{'/js/contact-form-script.js'}}"></script>
-    <script src="{{'/js/custom.js'}}"></script>
+    <script src="{% static 'Store/js/jquery.superslides.min.js'%}"></script>
+    <script src="{% static 'Store/js/bootstrap-select.js'%}"></script>
+    <script src="{% static 'Store/js/inewsticker.js'%}"></script>
+    <script src="{% static 'Store/js/bootsnav.js'%}"></script>
+    <script src="{% static 'Store/js/images-loded.min.js'%}"></script>
+    <script src="{% static 'Store/js/isotope.min.js'%}"></script>
+    <script src="{% static 'Store/js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'Store/js/baguetteBox.min.js'%}"></script>
+    <script src="{% static 'Store/js/form-validator.min.js'%}"></script>
+    <script src="{% static 'Store/js/contact-form-script.js'%}"></script>
+    <script src="{% static 'Store/js/custom.js'%}"></script>
 
     {% comment %} alertify js {% endcomment %}
     <!-- JavaScript -->
