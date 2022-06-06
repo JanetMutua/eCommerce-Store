@@ -16,9 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Store.views import *
-from User.views import register
 from django.conf import settings
 from django.conf.urls.static import static
+from Store.controller import authview
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,13 +30,17 @@ urlpatterns = [
     path('mycart/', AddCart, name='mycart'),
     path('checkout/', Checkout, name='checkout'),
 
+    # registration and login urls
+    path('register/', authview.register, name='register'),
+    path('login/', authview.loginpage, name='loginpage'),
+    path('logout/', authview.logoutpage, name='logout'),
+    
     # fetching products
     path('category', categories, name='category'),
     path('categories/<str:slug>', category_view, name='product_category'),
-    # product detail
     path('categories/<str:cate_slug>/<str:prod_slug>', Product_detail, name='productdetail'),
 
-    path('register/', register, name='register'),
+    
 
     
     # path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),

@@ -39,7 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Store.apps.StoreConfig',
-    'User.apps.UserConfig',
+    'crispy_forms',
+    
+    # deleted User app
+    # 'User.apps.UserConfig',
     
 ]
 
