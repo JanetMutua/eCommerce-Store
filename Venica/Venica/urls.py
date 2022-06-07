@@ -23,30 +23,35 @@ from Store.controller import authview
 
 
 urlpatterns = [
+
+    #----------------------------------------------other urls----------------------------------------
+
     path('admin/', admin.site.urls),
     path('', Storefront, name='home'),
+    path('contact-us/', Contact, name = 'contact'),
+    
+
+    # ---------------------------------------shop urls-----------------------------------------------------
+
+    path('shopsize/', Shopsize, name='shopsize'),
     path('Shop/', Shop, name='shop'),
     path('wishlist/', Wishlist, name='wishlist'),
     path('mycart/', AddCart, name='mycart'),
     path('checkout/', Checkout, name='checkout'),
 
-    # registration and login urls
+    #------------------------------registration and login urls-------------------------------------------
+
     path('register/', authview.register, name='register'),
     path('login/', authview.loginpage, name='loginpage'),
     path('logout/', authview.logoutpage, name='logout'),
     
-    # fetching products
+    #------------------------------------------fetching products------------------------------------------
+
     path('category', categories, name='category'),
     path('categories/<str:slug>', category_view, name='product_category'),
     path('categories/<str:cate_slug>/<str:prod_slug>', Product_detail, name='productdetail'),
 
     
-
-    
-    # path('login/', auth_views.LoginView.as_view(template_name='users/login.html'), name='login'),
-    # path('logout/', auth_views.LogoutView.as_view(template_name='users/logout.html'), name='logout'),
-    # path('profile/', user_views.profile, name='profile'),
-
     # # -------------------------passwords reset links----------------------------------------------
 
 
@@ -57,4 +62,5 @@ urlpatterns = [
     #     template_name='users/password_reset_done.html'), name='password_reset_done'),
 
     #path('password-reset-confirm/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'), name='password_reset_confirm'),
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -1,0 +1,27 @@
+{%extends './base.html'%}
+{%block content%}
+<div class="col-lg-12">
+    <div class="title-all text-center">
+        <h1>Our Size Selection</h1>
+    </div>
+</div>
+
+<div class="box-add-products">
+    <div class="container">
+        {%for item in size%}
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="offer-box-products">
+                    <div class="box-img-hover">
+                        <img class="img-fluid" src="{{item.image.url}}" alt="" />
+                        <div class="mask-icon">
+                            <a class="cart" href="#">{{item.name}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock content%}
