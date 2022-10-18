@@ -1,3 +1,3 @@
-# VENICA
-Official-Ecomm-Store for Venica Lady
+
+Ecommerce-Store 
 Utilizes MySQL database with Xampp
